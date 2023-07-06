@@ -81,13 +81,21 @@ function handleToggleMode() {
     const gridItem = document.querySelectorAll('.grid__item');
     gridItem.forEach(gridItem => {
         gridItem.removeEventListener('pointerdown',toggleClickTrue);
-        gridItem.removeEventListener('pointerup',toggleClickTrue);
+        gridItem.removeEventListener('pointerup',toggleClickFalse);
         gridItem.removeEventListener('pointermove',toggleBackground);
         gridItem.removeEventListener('pointermove',toggleWhiteground);
         gridItem.removeEventListener('pointermove',toggleRainbow);
         gridItem.addEventListener('pointerdown',toggleClickTrue);
         gridItem.addEventListener('pointerup',toggleClickFalse);
         gridItem.addEventListener('pointermove',toggleChange);
+        gridItem.removeEventListener('touchstart',toggleClickTrue);
+        gridItem.removeEventListener('touchend',toggleClickFalse);
+        gridItem.removeEventListener('touchmove',toggleBackground);
+        gridItem.removeEventListener('touchmove',toggleWhiteground);
+        gridItem.removeEventListener('touchmove',toggleRainbow);
+        gridItem.addEventListener('touchstart',toggleClickTrue);
+        gridItem.addEventListener('touchend',toggleClickFalse);
+        gridItem.addEventListener('touchmove',toggleChange);
     });
 }
 
@@ -95,38 +103,62 @@ function handleSimpleMode(e) {
     const gridItem = document.querySelectorAll('.grid__item');
     gridItem.forEach(gridItem => {
         gridItem.removeEventListener('pointerdown',toggleClickTrue);
-        gridItem.removeEventListener('pointerup',toggleClickTrue);
+        gridItem.removeEventListener('pointerup',toggleClickFalse);
         gridItem.removeEventListener('pointermove',toggleChange);
         gridItem.removeEventListener('pointermove',toggleWhiteground);
         gridItem.removeEventListener('pointermove',toggleRainbow);
-        gridItem.addEventListener('pointerdown',() => isClicked=true);
-        gridItem.addEventListener('pointerup',() => isClicked=false);
+        gridItem.addEventListener('pointerdown',toggleClickTrue);
+        gridItem.addEventListener('pointerup',toggleClickFalse);
         gridItem.addEventListener('pointermove',toggleBackground);
+        gridItem.removeEventListener('touchstart',toggleClickTrue);
+        gridItem.removeEventListener('touchend',toggleClickFalse);
+        gridItem.removeEventListener('touchmove',toggleChange);
+        gridItem.removeEventListener('touchmove',toggleWhiteground);
+        gridItem.removeEventListener('touchmove',toggleRainbow);
+        gridItem.addEventListener('touchstart',toggleClickTrue);
+        gridItem.addEventListener('touchend',toggleClickFalse);
+        gridItem.addEventListener('touchmove',toggleBackground);
     });
 }
 function handleEraseMode(e) {
     const gridItem = document.querySelectorAll('.grid__item');
     gridItem.forEach(gridItem => {
         gridItem.removeEventListener('pointerdown',toggleClickTrue);
-        gridItem.removeEventListener('pointerup',toggleClickTrue);
+        gridItem.removeEventListener('pointerup',toggleClickFalse);
         gridItem.removeEventListener('pointermove',toggleBackground);
         gridItem.removeEventListener('pointermove',toggleChange);
         gridItem.removeEventListener('pointermove',toggleRainbow);
-        gridItem.addEventListener('pointerdown',() => isClicked=true);
-        gridItem.addEventListener('pointerup',() => isClicked=false);
+        gridItem.addEventListener('pointerdown',toggleClickTrue);
+        gridItem.addEventListener('pointerup',toggleClickFalse);
         gridItem.addEventListener('pointermove',toggleWhiteground);
+        gridItem.removeEventListener('touchstart',toggleClickTrue);
+        gridItem.removeEventListener('touchend',toggleClickFalse);
+        gridItem.removeEventListener('touchmove',toggleBackground);
+        gridItem.removeEventListener('touchmove',toggleChange);
+        gridItem.removeEventListener('touchmove',toggleRainbow);
+        gridItem.addEventListener('touchstart',toggleClickTrue);
+        gridItem.addEventListener('touchend',toggleClickFalse);
+        gridItem.addEventListener('touchmove',toggleWhiteground);
     });
 }
 function handleRainbowMode(e) {
     const gridItem = document.querySelectorAll('.grid__item');
     gridItem.forEach(gridItem => {
         gridItem.removeEventListener('pointerdown',toggleClickTrue);
-        gridItem.removeEventListener('pointerup',toggleClickTrue);
+        gridItem.removeEventListener('pointerup',toggleClickFalse);
         gridItem.removeEventListener('pointermove',toggleChange);
         gridItem.removeEventListener('pointermove',toggleWhiteground);
         gridItem.removeEventListener('pointermove',toggleBackground);
-        gridItem.addEventListener('pointerdown',() => isClicked=true);
-        gridItem.addEventListener('pointerup',() => isClicked=false);
+        gridItem.addEventListener('pointerdown',toggleClickTrue);
+        gridItem.addEventListener('pointerup',toggleClickFalse);
         gridItem.addEventListener('pointermove',toggleRainbow);
+        gridItem.removeEventListener('touchstart',toggleClickTrue);
+        gridItem.removeEventListener('touchend',toggleClickFalse);
+        gridItem.removeEventListener('touchmove',toggleChange);
+        gridItem.removeEventListener('touchmove',toggleWhiteground);
+        gridItem.removeEventListener('touchmove',toggleBackground);
+        gridItem.addEventListener('touchstart',toggleClickTrue);
+        gridItem.addEventListener('touchend',toggleClickFalse);
+        gridItem.addEventListener('touchmove',toggleRainbow);
     });
 }
