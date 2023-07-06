@@ -42,6 +42,7 @@
 
 .grid__item{
     background-color: white;
+    user-select: none;
 }
 
 .grid__item:hover{
