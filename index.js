@@ -80,53 +80,53 @@ function toggleRainbow(e){
 function handleToggleMode() {
     const gridItem = document.querySelectorAll('.grid__item');
     gridItem.forEach(gridItem => {
-        gridItem.removeEventListener('mousedown',toggleClickTrue);
-        gridItem.removeEventListener('mouseup',toggleClickTrue);
-        gridItem.removeEventListener('mousemove',toggleBackground);
-        gridItem.removeEventListener('mousemove',toggleWhiteground);
-        gridItem.removeEventListener('mousemove',toggleRainbow);
-        gridItem.addEventListener('mousedown',toggleClickTrue);
-        gridItem.addEventListener('mouseup',toggleClickFalse);
-        gridItem.addEventListener('mousemove',toggleChange);
+        gridItem.removeEventListener('pointerdown',toggleClickTrue);
+        gridItem.removeEventListener('pointerup',toggleClickTrue);
+        gridItem.removeEventListener('pointermove',toggleBackground);
+        gridItem.removeEventListener('pointermove',toggleWhiteground);
+        gridItem.removeEventListener('pointermove',toggleRainbow);
+        gridItem.addEventListener('pointerdown',toggleClickTrue);
+        gridItem.addEventListener('pointerup',toggleClickFalse);
+        gridItem.addEventListener('pointermove',toggleChange);
     });
 }
 
 function handleSimpleMode(e) {
     const gridItem = document.querySelectorAll('.grid__item');
     gridItem.forEach(gridItem => {
-        gridItem.removeEventListener('mousedown',toggleClickTrue);
-        gridItem.removeEventListener('mouseup',toggleClickTrue);
-        gridItem.removeEventListener('mousemove',toggleChange);
-        gridItem.removeEventListener('mousemove',toggleWhiteground);
-        gridItem.removeEventListener('mousemove',toggleRainbow);
-        gridItem.addEventListener('mousedown',() => isClicked=true);
-        gridItem.addEventListener('mouseup',() => isClicked=false);
-        gridItem.addEventListener('mousemove',toggleBackground);
+        gridItem.removeEventListener('pointerdown',toggleClickTrue);
+        gridItem.removeEventListener('pointerup',toggleClickTrue);
+        gridItem.removeEventListener('pointermove',toggleChange);
+        gridItem.removeEventListener('pointermove',toggleWhiteground);
+        gridItem.removeEventListener('pointermove',toggleRainbow);
+        gridItem.addEventListener('pointerdown',() => isClicked=true);
+        gridItem.addEventListener('pointerup',() => isClicked=false);
+        gridItem.addEventListener('pointermove',toggleBackground);
     });
 }
 function handleEraseMode(e) {
     const gridItem = document.querySelectorAll('.grid__item');
     gridItem.forEach(gridItem => {
-        gridItem.removeEventListener('mousedown',toggleClickTrue);
-        gridItem.removeEventListener('mouseup',toggleClickTrue);
-        gridItem.removeEventListener('mousemove',toggleBackground);
-        gridItem.removeEventListener('mousemove',toggleChange);
-        gridItem.removeEventListener('mousemove',toggleRainbow);
-        gridItem.addEventListener('mousedown',() => isClicked=true);
-        gridItem.addEventListener('mouseup',() => isClicked=false);
-        gridItem.addEventListener('mousemove',toggleWhiteground);
+        gridItem.removeEventListener('pointerdown',toggleClickTrue);
+        gridItem.removeEventListener('pointerup',toggleClickTrue);
+        gridItem.removeEventListener('pointermove',toggleBackground);
+        gridItem.removeEventListener('pointermove',toggleChange);
+        gridItem.removeEventListener('pointermove',toggleRainbow);
+        gridItem.addEventListener('pointerdown',() => isClicked=true);
+        gridItem.addEventListener('pointerup',() => isClicked=false);
+        gridItem.addEventListener('pointermove',toggleWhiteground);
     });
 }
 function handleRainbowMode(e) {
     const gridItem = document.querySelectorAll('.grid__item');
     gridItem.forEach(gridItem => {
-        gridItem.removeEventListener('mousedown',toggleClickTrue);
-        gridItem.removeEventListener('mouseup',toggleClickTrue);
-        gridItem.removeEventListener('mousemove',toggleChange);
-        gridItem.removeEventListener('mousemove',toggleWhiteground);
-        gridItem.removeEventListener('mousemove',toggleBackground);
-        gridItem.addEventListener('mousedown',() => isClicked=true);
-        gridItem.addEventListener('mouseup',() => isClicked=false);
-        gridItem.addEventListener('mousemove',toggleRainbow);
+        gridItem.removeEventListener('pointerdown',toggleClickTrue);
+        gridItem.removeEventListener('pointerup',toggleClickTrue);
+        gridItem.removeEventListener('pointermove',toggleChange);
+        gridItem.removeEventListener('pointermove',toggleWhiteground);
+        gridItem.removeEventListener('pointermove',toggleBackground);
+        gridItem.addEventListener('pointerdown',() => isClicked=true);
+        gridItem.addEventListener('pointerup',() => isClicked=false);
+        gridItem.addEventListener('pointermove',toggleRainbow);
     });
 }
