@@ -3,10 +3,10 @@ const rangeInput = document.querySelector('input');
 const rangeLabel = document.querySelector('label');
 
 //modes
-const toggleMode = document.querySelector('.toggle');
-const rainbowMode = document.querySelector('.rainbow');
-const simpleMode = document.querySelector('.simple');
-const eraseMode = document.querySelector('.erase');
+const toggleMode = document.querySelector('[value="Weird"]');
+const rainbowMode = document.querySelector('[value="Rainbow"]');
+const simpleMode = document.querySelector('[value="Normal"]');
+const eraseMode = document.querySelector('[value="Eraser"]');
 
 
 //events

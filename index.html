@@ -10,10 +10,12 @@
     <div class="container">
         <h1>Etch a sketch</h1>
         <div class="dashboard">
-            <div class="mode toggle">Toggle mode</div>
-            <div class="mode rainbow">Rainbow mode</div>
-            <div class="mode simple">Simple mode</div>
-            <div class="mode erase">Erase mode</div>
+            <select name="modes" id="modes" class="mode">
+                <option value="Weird">Weird Mode</option>
+                <option value="Normal">Normal Mode</option>
+                <option value="Eraser">Eraser Mode</option>
+                <option value="Rainbow">Rainbow Mode</option>
+            </select>
             <fieldset>
                 <label for="grid__number"></label>
                 <input type="range" id="grid__number">
